@@ -68,30 +68,32 @@ nav {
 .carousel {
   width: 100%;
   overflow: hidden;
+  background: #b3f2a9;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  white-space: nowrap; /* Ensure items stay in a single line */
   position: relative;
-  background-color: #b3f2a9;
-  padding: 0.8rem 0;
-  margin-top: 1.8rem;
-  color: #000;
-  font-size: 1.6rem;
-  text-align: center;
 }
 
 .carousel-track {
-  display: flex;
-  align-items: center;
-
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
+  display: inline-flex;
+  animation: scroll-left 20s linear infinite; /* Smooth scrolling */
 }
 
 .carousel-item {
-  flex: 0 0 100%;
-  text-align: center;
-
-  font-size: 1.5rem;
+  padding: 0 2rem;
+  display: inline-block;
 }
 
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%); /* Start fully off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* End fully off-screen to the left */
+  }
+}
 @media (max-width: 768px) {
   .hero-image {
     width: 10rem;
