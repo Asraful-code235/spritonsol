@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Christmas Bell - Personal Use", sans-serif;
   margin: 0;
   background-color: rgb(0, 0, 0);
 }
@@ -64,6 +64,33 @@ nav {
   object-fit: cover;
 }
 
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #b3f2a9;
+  padding: 1rem 1.4rem;
+  margin-top: 1.8rem;
+  color: #000;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  text-align: center;
+
+  font-size: 1.5rem;
+}
+
 @media (max-width: 768px) {
   .hero-image {
     width: 10rem;
@@ -82,6 +109,13 @@ nav {
   }
   header {
     height: 60vh;
+  }
+
+  .carousel-item {
+    flex: 0 0 94%;
+    text-align: center;
+
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 460px) {

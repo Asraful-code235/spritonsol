@@ -478,3 +478,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  const items = document.querySelectorAll(".carousel-item");
+  const totalItems = items.length;
+
+  let currentIndex = 0;
+  const interval = 3000; // 3 seconds between slides
+
+  // Function to move the carousel
+  const moveCarousel = () => {
+    currentIndex = (currentIndex + 1) % totalItems; // Loop back to the start
+    const translateX = -currentIndex * 100;
+    track.style.transform = `translateX(${translateX}%)`;
+  };
+
+  // Start auto-play
+  let carouselInterval = setInterval(moveCarousel, interval);
+
+  // Pause on hover
+  track.addEventListener("mouseover", () => clearInterval(carouselInterval));
+  track.addEventListener("mouseleave", () => {
+    carouselInterval = setInterval(moveCarousel, interval);
+  });
+});
