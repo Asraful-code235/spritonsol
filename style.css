@@ -54,16 +54,14 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top: 1rem;
   overflow: hidden;
+  max-height: 550px;
 }
 
 .hero-video {
-  max-width: 600px;
   width: 100%;
-  overflow: hidden;
+  object-position: top;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
