@@ -68,8 +68,8 @@ nav {
 .carousel {
   width: 100%;
   overflow: hidden;
-  background: #b3f2a9;
-  color: #da291c;
+  background: #da291c;
+  color: white;
   padding: 1rem 0;
   font-size: 1.5rem;
   font-weight: bold;
